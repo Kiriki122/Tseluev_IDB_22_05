@@ -16,13 +16,13 @@ public class TestScript : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space)){
             //cube = GameObject.Find("SpecialCube");
-            Paint();
+            inst();
         }
     }
 
-    void Paint(){
-        for(int i = 0; i < 10; i++){
-            Vector3 nv = new Vector3(i,0,0);
+    void inst(){
+        for(int i = 0, j = 0; i < 10; i++, j+=3){
+            Vector3 nv = new Vector3(j,0,0);
             Instantiate(gameObject, nv, gameObject.transform.rotation);
         }
     }
